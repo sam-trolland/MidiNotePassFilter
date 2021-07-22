@@ -2,7 +2,7 @@
 
 <JUCERPROJECT id="pRqQbE" name="MidiNotePassFilter" projectType="audioplug"
               useAppConfig="0" displaySplashScreen="1" jucerFormatVersion="1"
-              version="1.0.0" companyName="SensiLab" bundleIdentifier="com.sensilab.MidiNotePassFilter"
+              version="1.0.1" companyName="SensiLab" bundleIdentifier="com.sensilab.MidiNotePassFilter"
               pluginCharacteristicsValue="pluginProducesMidiOut,pluginWantsMidiIn">
   <MAINGROUP id="JROgwL" name="MidiNotePassFilter">
     <GROUP id="{A211FACE-42C7-6E91-45BA-1300469DD6A3}" name="Source">

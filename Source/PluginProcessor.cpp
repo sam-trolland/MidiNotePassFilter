@@ -15,9 +15,9 @@ MidiNotePassFilterAudioProcessor::MidiNotePassFilterAudioProcessor()
      : AudioProcessor (BusesProperties()
                      #if ! JucePlugin_IsMidiEffect
                       #if ! JucePlugin_IsSynth
-                       .withInput  ("Input",  juce::AudioChannelSet::stereo(), true)
+                       //.withInput  ("Input",  juce::AudioChannelSet::stereo(), true)
                       #endif
-                       .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
+                       //.withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
                        )
 #endif
@@ -151,7 +151,7 @@ void MidiNotePassFilterAudioProcessor::processBlock (juce::AudioBuffer<float>& b
         auto msg = meta.getMessage();
         msg.setTimeStamp(Time::getApproximateMillisecondCounter() * 0.001);
         if(msg.isNoteOnOrOff()){
-            //msg.setChannel(2);
+            msg.setChannel(2);
             generatedMidi.addEvent(msg, 0);
         }
     }
